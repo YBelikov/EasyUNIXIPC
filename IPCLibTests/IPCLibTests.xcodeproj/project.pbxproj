@@ -10,6 +10,7 @@
 		CE45092225D6D32300BB73A0 /* MessageExchange.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE45092125D6D32300BB73A0 /* MessageExchange.cpp */; };
 		CE45093925D6DA9900BB73A0 /* libipc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE45093825D6DA9900BB73A0 /* libipc.dylib */; };
 		CE45094425D6E72B00BB73A0 /* catch_amalgamated.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE45094325D6E72B00BB73A0 /* catch_amalgamated.cpp */; };
+		CE5AC92C25E7CB8500EC48AF /* ServerTestFixture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE5AC92A25E7CB8500EC48AF /* ServerTestFixture.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		CE45093E25D6DEBD00BB73A0 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
 		CE45094225D6E72A00BB73A0 /* catch_amalgamated.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch_amalgamated.hpp; sourceTree = "<group>"; };
 		CE45094325D6E72B00BB73A0 /* catch_amalgamated.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = catch_amalgamated.cpp; sourceTree = "<group>"; };
+		CE5AC92A25E7CB8500EC48AF /* ServerTestFixture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ServerTestFixture.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			children = (
 				CE45092925D6D3C800BB73A0 /* lib */,
 				CE45092125D6D32300BB73A0 /* MessageExchange.cpp */,
+				CE5AC92A25E7CB8500EC48AF /* ServerTestFixture.cpp */,
 			);
 			path = IPCLibTests;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5AC92C25E7CB8500EC48AF /* ServerTestFixture.cpp in Sources */,
 				CE45094425D6E72B00BB73A0 /* catch_amalgamated.cpp in Sources */,
 				CE45092225D6D32300BB73A0 /* MessageExchange.cpp in Sources */,
 			);
