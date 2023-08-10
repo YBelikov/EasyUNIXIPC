@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../XCodeProjects/libipc/ipc.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:IPCLibTests/IPCLibTests.xcodeproj">
    </FileRef>
    <FileRef
