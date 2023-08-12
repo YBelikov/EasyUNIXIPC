@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BACF0712259B7493003C71FB"
-               BuildableName = "libipc.dylib"
-               BlueprintName = "ipc"
-               ReferencedContainer = "container:ipc.xcodeproj">
+               BuildableName = "libEasyUNIXIPC.dylib"
+               BlueprintName = "EasyUNIXIPC"
+               ReferencedContainer = "container:EasyUNIXIPC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -51,9 +51,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BACF0712259B7493003C71FB"
-            BuildableName = "libipc.dylib"
-            BlueprintName = "ipc"
-            ReferencedContainer = "container:ipc.xcodeproj">
+            BuildableName = "libEasyUNIXIPC.dylib"
+            BlueprintName = "EasyUNIXIPC"
+            ReferencedContainer = "container:EasyUNIXIPC.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

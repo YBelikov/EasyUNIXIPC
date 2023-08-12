@@ -17,10 +17,10 @@ public:
     const std::string GetSocketPath() const;
     
 private:
-    static const std::string sPATH_;
-    int socketFileDescriptor_;
-    sockaddr_un sockAddr_{};
-    socklen_t length_;
+    static const std::string sPATH;
+    int mSocketFileDescriptor;
+    sockaddr_un mSockAddr{};
+    socklen_t mLength;
 };
 
 #endif /* Socket_h */

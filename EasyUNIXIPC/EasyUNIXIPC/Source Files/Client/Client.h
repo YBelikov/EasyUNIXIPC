@@ -8,7 +8,6 @@
 
 class Client
 {
-    
 public:
     int Send(const char* message, ssize_t messageLength);
     int Receive(char** message, ssize_t& messageLength);
@@ -19,7 +18,7 @@ private:
     int SetSocketFileDescriptor();
     
 private:
-    Socket mClientSocket_{};
+    Socket mClientSocket{};
 };
 
 #pragma GCC visibility pop

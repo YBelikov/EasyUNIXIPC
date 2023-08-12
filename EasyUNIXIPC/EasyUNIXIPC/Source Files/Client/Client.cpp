@@ -10,8 +10,8 @@ int Client::Connect()
     {
         return errno;
     }
-    sockaddr_un* address = clientSocket_.GetSocketAddressPtr();
-    int connectionResult = connect(clientSocket_.GetFileDescriptor(), reinterpret_cast<sockaddr*>(address), clientSocket_.GetLength());
+    sockaddr_un* address = mClientSocket.GetSocketAddressPtr();
+    int connectionResult = connect(mClientSocket.GetFileDescriptor(), reinterpret_cast<sockaddr*>(address), mClientSocket.GetLength());
     return connectionResult < 0 ? errno : 0;
 }
 
@@ -22,7 +22,7 @@ int Client::SetSocketFileDescriptor()
     {
         return errno;
     }
-    clientSocket_.SetFileDescriptor(socketFD);
+    mClientSocket.SetFileDescriptor(socketFD);
     return 0;
 }
 
@@ -33,30 +33,30 @@ int Client::Send(const char* message, ssize_t messageLength)
         return EFAULT;
     }
     
-    ssize_t bytesWritten = write(clientSocket_.GetFileDescriptor(), &messageLength, sizeof(messageLength));
+    ssize_t bytesWritten = write(mClientSocket.GetFileDescriptor(), &messageLength, sizeof(messageLength));
     if (bytesWritten < 0)
     {
         return errno;
     }
-    bytesWritten = write(clientSocket_.GetFileDescriptor(), message, messageLength);
+    bytesWritten = write(mClientSocket.GetFileDescriptor(), message, messageLength);
     return bytesWritten > 0 ? 0 : errno;
 }
 
 bool Client::Receive()
 {
     bool response = false;
-    ssize_t bytesRead = read(clientSocket_.GetFileDescriptor(), &response, sizeof(bool));
+    ssize_t bytesRead = read(mClientSocket.GetFileDescriptor(), &response, sizeof(bool));
     return response;
 }
 
 int Client::Receive(char** message, ssize_t& messageLength)
 {
-    ssize_t bytesRead = read(clientSocket_.GetFileDescriptor(), &messageLength, sizeof(ssize_t));
+    ssize_t bytesRead = read(mClientSocket.GetFileDescriptor(), &messageLength, sizeof(ssize_t));
     if (bytesRead < 0)
     {
         return errno;
     }
     *message = new char[messageLength];
-    bytesRead = read(clientSocket_.GetFileDescriptor(), *message, messageLength);
+    bytesRead = read(mClientSocket.GetFileDescriptor(), *message, messageLength);
     return bytesRead < 0 ? errno : 0;
 }

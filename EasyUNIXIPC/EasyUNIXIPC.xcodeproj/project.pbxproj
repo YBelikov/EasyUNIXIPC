@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		BA83508F25A89DF7003C2BFD /* Socket.h in Headers */ = {isa = PBXBuildFile; fileRef = BA83508E25A89DF7003C2BFD /* Socket.h */; };
 		BA83509325A89E5A003C2BFD /* Socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA83509225A89E5A003C2BFD /* Socket.cpp */; };
-		BA8350A425AC988D003C2BFD /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = BA8350A325AC988D003C2BFD /* Utils.h */; };
-		BA8350AB25AC99AB003C2BFD /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA8350AA25AC99AB003C2BFD /* Utils.cpp */; };
 		BACF0727259B79FB003C71FB /* Server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BACF0726259B79FB003C71FB /* Server.cpp */; };
 		BACF072F259CAD75003C71FB /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BACF072E259CAD75003C71FB /* Client.cpp */; };
 /* End PBXBuildFile section */
@@ -18,9 +16,7 @@
 /* Begin PBXFileReference section */
 		BA83508E25A89DF7003C2BFD /* Socket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Socket.h; sourceTree = "<group>"; };
 		BA83509225A89E5A003C2BFD /* Socket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Socket.cpp; sourceTree = "<group>"; };
-		BA8350A325AC988D003C2BFD /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		BA8350AA25AC99AB003C2BFD /* Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
-		BACF0713259B7493003C71FB /* libipc.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libipc.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		BACF0713259B7493003C71FB /* libEasyUNIXIPC.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEasyUNIXIPC.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACF0725259B79A4003C71FB /* Server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
 		BACF0726259B79FB003C71FB /* Server.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Server.cpp; sourceTree = "<group>"; };
 		BACF072D259CA6C2003C71FB /* Client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
@@ -44,7 +40,6 @@
 				BACF072B259CA68A003C71FB /* Server */,
 				BACF072C259CA6A3003C71FB /* Client */,
 				BA83508D25A89CD3003C2BFD /* Socket */,
-				BA8350A225AC9862003C2BFD /* Utils */,
 			);
 			path = "Source Files";
 			sourceTree = "<group>";
@@ -58,15 +53,6 @@
 			path = Socket;
 			sourceTree = "<group>";
 		};
-		BA8350A225AC9862003C2BFD /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				BA8350A325AC988D003C2BFD /* Utils.h */,
-				BA8350AA25AC99AB003C2BFD /* Utils.cpp */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		BACF070A259B7493003C71FB = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +64,7 @@
 		BACF0714259B7493003C71FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BACF0713259B7493003C71FB /* libipc.dylib */,
+				BACF0713259B7493003C71FB /* libEasyUNIXIPC.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,7 +102,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA8350A425AC988D003C2BFD /* Utils.h in Headers */,
 				BA83508F25A89DF7003C2BFD /* Socket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,9 +109,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		BACF0712259B7493003C71FB /* ipc */ = {
+		BACF0712259B7493003C71FB /* EasyUNIXIPC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BACF071E259B7493003C71FB /* Build configuration list for PBXNativeTarget "ipc" */;
+			buildConfigurationList = BACF071E259B7493003C71FB /* Build configuration list for PBXNativeTarget "EasyUNIXIPC" */;
 			buildPhases = (
 				BACF070F259B7493003C71FB /* Headers */,
 				BACF0710259B7493003C71FB /* Sources */,
@@ -136,9 +121,9 @@
 			);
 			dependencies = (
 			);
-			name = ipc;
+			name = EasyUNIXIPC;
 			productName = ipc;
-			productReference = BACF0713259B7493003C71FB /* libipc.dylib */;
+			productReference = BACF0713259B7493003C71FB /* libEasyUNIXIPC.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -154,7 +139,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BACF070E259B7493003C71FB /* Build configuration list for PBXProject "ipc" */;
+			buildConfigurationList = BACF070E259B7493003C71FB /* Build configuration list for PBXProject "EasyUNIXIPC" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -167,7 +152,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BACF0712259B7493003C71FB /* ipc */,
+				BACF0712259B7493003C71FB /* EasyUNIXIPC */,
 			);
 		};
 /* End PBXProject section */
@@ -180,7 +165,6 @@
 				BACF072F259CAD75003C71FB /* Client.cpp in Sources */,
 				BA83509325A89E5A003C2BFD /* Socket.cpp in Sources */,
 				BACF0727259B79FB003C71FB /* Server.cpp in Sources */,
-				BA8350AB25AC99AB003C2BFD /* Utils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +222,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -291,7 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -335,7 +319,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BACF070E259B7493003C71FB /* Build configuration list for PBXProject "ipc" */ = {
+		BACF070E259B7493003C71FB /* Build configuration list for PBXProject "EasyUNIXIPC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BACF071C259B7493003C71FB /* Debug */,
@@ -344,7 +328,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BACF071E259B7493003C71FB /* Build configuration list for PBXNativeTarget "ipc" */ = {
+		BACF071E259B7493003C71FB /* Build configuration list for PBXNativeTarget "EasyUNIXIPC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BACF071F259B7493003C71FB /* Debug */,
