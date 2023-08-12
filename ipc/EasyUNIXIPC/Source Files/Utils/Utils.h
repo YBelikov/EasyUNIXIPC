@@ -12,10 +12,8 @@
 
 namespace Utils
 {
-
-int SendMessageLength(const Socket* socket, ssize_t messageLength);
-int ReceiveMessageLength(const Socket* socket, ssize_t& messageLength);
-
+	int SendMessageLength(const Socket* socket, ssize_t messageLength);
+	int ReceiveMessageLength(const Socket* socket, ssize_t& messageLength);
 };
 
 #endif /* Utils_h */

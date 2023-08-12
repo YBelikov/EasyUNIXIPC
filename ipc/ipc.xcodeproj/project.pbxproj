@@ -38,28 +38,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BA83508D25A89CD3003C2BFD /* socket */ = {
+		121347A42A855BE500E02279 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				BACF072B259CA68A003C71FB /* Server */,
+				BACF072C259CA6A3003C71FB /* Client */,
+				BA83508D25A89CD3003C2BFD /* Socket */,
+				BA8350A225AC9862003C2BFD /* Utils */,
+			);
+			path = "Source Files";
+			sourceTree = "<group>";
+		};
+		BA83508D25A89CD3003C2BFD /* Socket */ = {
 			isa = PBXGroup;
 			children = (
 				BA83508E25A89DF7003C2BFD /* Socket.h */,
 				BA83509225A89E5A003C2BFD /* Socket.cpp */,
 			);
-			path = socket;
+			path = Socket;
 			sourceTree = "<group>";
 		};
-		BA8350A225AC9862003C2BFD /* utils */ = {
+		BA8350A225AC9862003C2BFD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				BA8350A325AC988D003C2BFD /* Utils.h */,
 				BA8350AA25AC99AB003C2BFD /* Utils.cpp */,
 			);
-			path = utils;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		BACF070A259B7493003C71FB = {
 			isa = PBXGroup;
 			children = (
-				BACF0715259B7493003C71FB /* ipc */,
+				BACF0715259B7493003C71FB /* EasyUNIXIPC */,
 				BACF0714259B7493003C71FB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,33 +83,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BACF0715259B7493003C71FB /* ipc */ = {
+		BACF0715259B7493003C71FB /* EasyUNIXIPC */ = {
 			isa = PBXGroup;
 			children = (
-				BA8350A225AC9862003C2BFD /* utils */,
-				BA83508D25A89CD3003C2BFD /* socket */,
-				BACF072C259CA6A3003C71FB /* client */,
-				BACF072B259CA68A003C71FB /* server */,
+				121347A42A855BE500E02279 /* Source Files */,
 			);
-			path = ipc;
+			path = EasyUNIXIPC;
 			sourceTree = "<group>";
 		};
-		BACF072B259CA68A003C71FB /* server */ = {
+		BACF072B259CA68A003C71FB /* Server */ = {
 			isa = PBXGroup;
 			children = (
 				BACF0726259B79FB003C71FB /* Server.cpp */,
 				BACF0725259B79A4003C71FB /* Server.h */,
 			);
-			path = server;
+			path = Server;
 			sourceTree = "<group>";
 		};
-		BACF072C259CA6A3003C71FB /* client */ = {
+		BACF072C259CA6A3003C71FB /* Client */ = {
 			isa = PBXGroup;
 			children = (
 				BACF072D259CA6C2003C71FB /* Client.h */,
 				BACF072E259CAD75003C71FB /* Client.cpp */,
 			);
-			path = client;
+			path = Client;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

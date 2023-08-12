@@ -12,18 +12,6 @@
 
 int Server::Start()
 {
-   /* if (SetServerSocketFileDescriptor() != 0)
-    {
-        return errno;
-    }
-    if (Bind() != 0)
-    {
-        return errno;
-    }
-    if (AcceptConnections() != 0)
-    {
-        return errno;
-    }*/
     mAcceptanceThread = std::thread(&Server::InitializeServer, this);
     return 0;
 }

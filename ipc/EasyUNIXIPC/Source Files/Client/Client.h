@@ -19,7 +19,7 @@ private:
     int SetSocketFileDescriptor();
     
 private:
-    Socket clientSocket_{};
+    Socket mClientSocket_{};
 };
 
 #pragma GCC visibility pop

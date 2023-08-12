@@ -19,7 +19,6 @@ private:
     int SetServerSocketFileDescriptor();
     int AcceptConnections();
     int Bind();
-    void DoJob(int clientSocketFD);
     void InitializeServer();
     
 private:
